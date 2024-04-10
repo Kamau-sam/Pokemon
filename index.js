@@ -24,3 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(error.message);
     }
 }
+function displayResults(pokemon) {
+  resultsSection.innerHTML = ''; /
+  const pokemonCard = document.createElement('div');
+  pokemonCard.innerHTML = `
+      <h2>${pokemon.name}</h2>
+      <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
+      <p>Height: ${pokemon.height}</p>
+      <p>Weight: ${pokemon.weight}</p>
+      <button class="like-button">Like</button>
+  `;
+  resultsSection.appendChild(pokemonCard);
