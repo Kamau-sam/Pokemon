@@ -11,3 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
           alert('Please enter a Pokemon name');
       }
   });
+
+  async function fetchPokemon(pokemonName) {
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+        if (!response.ok) {
+            throw new Error('Pokemon not found');
+        }
+        const data = await response.json();
+        displayResults(data);
+    } catch (error) {
+        alert(error.message);
+    }
+}
