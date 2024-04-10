@@ -35,3 +35,9 @@ function displayResults(pokemon) {
       <button class="like-button">Like</button>
   `;
   resultsSection.appendChild(pokemonCard);
+  const likeButton = pokemonCard.querySelector('.like-button');
+        likeButton.addEventListener('click', () => {
+            alert(`You liked ${pokemon.name}!`);
+        });
+    }
+});
