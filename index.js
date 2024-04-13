@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
-      const pokemonName = searchInput.value.toLowerCase().trim();
+      const pokemonName = searchInput.value.toLowerCase();
       if (pokemonName) {
         fetchPokemon(pokemonName);
       } else {
