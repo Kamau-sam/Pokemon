@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter a Pokemon name");
     }
   });
+
   searchInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       const pokemonCard = searchInput.value.toLowerCase().trim();
