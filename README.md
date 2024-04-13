@@ -27,8 +27,12 @@ clicking a search button or pressing 'Enter'. Additionally, there is a 'like' fe
 1. **Clone the Repository**
    ```bash
    git clone git@github.com:Kamau-sam/Pokemon.git
+
 ### License and Copyright
-©2024 Kamau Samuel. All Rights Reserved.
+
+©2024 Kamau Samuel.
+
+All Rights Reserved.
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
