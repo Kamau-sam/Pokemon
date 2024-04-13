@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
-      const pokemonCard = searchInput.value.toLowerCase().trim();
-      if (pokemonCard) {
+      const pokemonName = searchInput.value.toLowerCase().trim();
+      if (pokemonName) {
         fetchPokemon(pokemonName);
       } else {
         alert("Please enter a Pokemon Name");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const likeButton = pokemonCard.querySelector(".like-button");
     likeButton.addEventListener("click", () => {
       alert(`You liked ${pokemon.name}!`);
-      likeButton.style.backgroundColor = "yellow";
+      likeButton.style.backgroundColor = "red";
     });
   }
 });
