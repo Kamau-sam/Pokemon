@@ -1,3 +1,4 @@
+// Event to Wait for the document to fully load before running the script
 document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.getElementById("search-button");
   const searchInput = document.getElementById("search-input");
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter a Pokemon name");
     }
   });
-
+  // Adding a keydown event listener to trigger search on pressing 'Enter'
   searchInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       const pokemonName = searchInput.value.toLowerCase();
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+  // Asynchronous function to fetch Pokemon data from the PokeAPI
   async function fetchPokemon(pokemonName) {
     try {
       const response = await fetch(
@@ -35,9 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
       alert(error.message);
     }
+    // Function to display the fetched Pokemon data in the results section
   }
   function displayResults(pokemon) {
-    resultsSection.innerHTML = "";
+    resultsSection.innerHTML = ""; // Clear previous results
     const pokemonCard = document.createElement("div");
     pokemonCard.innerHTML = `
       <h2>${pokemon.name}</h2>
@@ -46,11 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>Weight: ${pokemon.weight}</p>
       <button class="like-button">Like</button>
   `;
+    // Set the inner HTML of the div to display Pokemon details and a 'Like' button
     resultsSection.appendChild(pokemonCard);
     const likeButton = pokemonCard.querySelector(".like-button");
     likeButton.addEventListener("click", () => {
       alert(`You liked ${pokemon.name}!`);
-      likeButton.style.backgroundColor = "red";
+      likeButton.style.backgroundColor = "red"; //Change the button's background color to red after liking
     });
   }
 });
