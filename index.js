@@ -11,7 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter a Pokemon name");
     }
   });
-
+  searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      const pokemonCard = searchInput.value.toLowerCase().trim();
+      if (pokemonCard) {
+        fetchPokemon(pokemonName);
+      } else {
+        alert("Please enter a Pokemon Name");
+      }
+    }
+  });
   async function fetchPokemon(pokemonName) {
     try {
       const response = await fetch(
