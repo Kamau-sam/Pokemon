@@ -10,6 +10,9 @@ This Pokémon Search App is a simple, web-based tool designed to allow users to 
 this application fetches and displays Pokémon details, including their images, heights, and weights. Users can initiate searches either by 
 clicking a search button or pressing 'Enter'. Additionally, there is a 'like' feature for each Pokémon, enhancing user interaction.
 
+## Live Link
+
+
 ## Features
 - **Search by Name**: Users can search for any Pokémon by typing its name.
 - **Responsive Design**: Implements basic responsive design principles for optimal viewing on different devices.
@@ -20,13 +23,15 @@ clicking a search button or pressing 'Enter'. Additionally, there is a 'like' fe
 - HTML
 - CSS
 - JavaScript
-- PokeAPI
+- PokeAPI\
+  
 
 ## Project Setup Instructions
 
 1. **Clone the Repository**
    ```bash
    git clone git@github.com:Kamau-sam/Pokemon.git
+
 
 ### License and Copyright
 
